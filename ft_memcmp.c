@@ -10,7 +10,7 @@ int ft_memcmp(const void *str1, const void *str2, size_t n)
   i = 0;
   if(n == 0)
     return(0);
-  while (s1 && n != 0)
+  while (s1[i] && n != 0)
   {
     if(s1[i] != s2[i])
       return(s1[i] - s2[i]);
@@ -25,9 +25,9 @@ int ft_memcmp(const void *str1, const void *str2, size_t n)
 #include <stdio.h>
 int main()
 {
-  char  str1[10] = "m";
-  char  str2[10] = "o";
+  char  str1[10] = "bom dia";
+  char  str2[10] = "boa tarde";
 
-  printf("RESULT: %d\n", ft_memcmp(str1, str2, 10));
+  printf("RESULT: %d\n", ft_memcmp(str1, str2, 2));
   return(0);
 }

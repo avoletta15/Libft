@@ -5,12 +5,12 @@ char  *strrchr(const char *s, int c)
 
   str = s;
   i = 0;
-  while(str[i] != '\0') // quando crirar a biblio, so usar a strlen
+  while(str[i] != '\0') // quando criar a biblio, so usar a strlen
     i++;
   while(str[i] != c && c >= 0)
     i--;
   if(str[i] == c)
-    return((char *)&str[i]);
+    return((char *)&str[i]); // (char *) str + i --> Tais // o Rafa tem um outro jeito 
   else
     return(0);
 }

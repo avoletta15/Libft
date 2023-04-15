@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marioliv <marioliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 20:08:05 by marioliv          #+#    #+#             */
-/*   Updated: 2023/04/14 16:25:08 by marioliv         ###   ########.fr       */
+/*   Created: 2023/04/14 16:32:24 by marioliv          #+#    #+#             */
+/*   Updated: 2023/04/15 17:50:18 by marioliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int a)
+void	ft_putchar_fd(char c, int fd)
 {
-	if (a >= 0 && a <= 127)
-		return (1);
-	else
-		return (0);
+	write (fd, &c, 1);
 }
+
+/*int	main()
+{
+	char	c;
+
+	c = 'a';
+	ft_putchar_fd(c, 1);
+	return (0);
+}*/

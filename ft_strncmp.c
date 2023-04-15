@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marioliv <marioliv@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/13 12:33:44 by marioliv          #+#    #+#             */
+/*   Updated: 2023/04/14 16:24:23 by marioliv         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(char *str1, char *str2, unsigned int n)
 {
@@ -10,4 +23,3 @@ int	ft_strncmp(char *str1, char *str2, unsigned int n)
 		i++;
 	return ((unsigned char)str1[i] - (unsigned char)str2[i]);
 }
-

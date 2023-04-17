@@ -6,35 +6,24 @@
 /*   By: marioliv <marioliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 12:37:55 by marioliv          #+#    #+#             */
-/*   Updated: 2023/04/14 16:24:12 by marioliv         ###   ########.fr       */
+/*   Updated: 2023/04/17 11:32:25 by marioliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	const char	*str;
-	int			i;
-	str = s;
-	i = 0;
-	while (str[i] != '\0')/*quando criar a biblio, so usar a strlen*/
-		i++;
-	while (str[i] != c && c >= 0)
-		i--;
-	if (str[i] == c)
-		return ((char *)&str[i]);/* (char *) str + i --> Tais // o Rafa tem um outro jeito*/
+	int	len;
+	
+	len = ft_strlen(s);
+	if (*s)
+	{
+		while (s[len] != (char)c && len >= 0)
+			len--;
+	}
+	if (s[len] == (char)c)
+			return ((char *)&*s + len);
 	else
-		return (0);
+		return (NULL);
 }
-
-/*#include <stdio.h>
-int main()
-{
-  const char  *s = "Rafael eh muito chato";
-  int c;
-
-  c = 'R';
-  printf("RESULT: %s\n", strrchr(s, c));
-  return(0);
-}*/

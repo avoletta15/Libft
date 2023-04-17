@@ -6,7 +6,7 @@
 /*   By: marioliv <marioliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 20:06:40 by marioliv          #+#    #+#             */
-/*   Updated: 2023/04/15 16:49:51 by marioliv         ###   ########.fr       */
+/*   Updated: 2023/04/17 19:50:13 by marioliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_atoi(const char *a)
 	n = 0;
 	while ((a[i] >= 9 && a[i] <= 13) || a[i] == ' ')
 		i++;
-	while (a[i] == '-' || a[i] == '+')
+	if (a[i] == '-' || a[i] == '+')
 	{
 		if (a[i] == '-')
 			m++;
@@ -40,13 +40,3 @@ int	ft_atoi(const char *a)
 	else
 		return (n);
 }
-
-/*#include <stdio.h>
-int	main()
-{
-	char	*str = "5";
-	
-	printf("RESULT: %d\n", (ft_atoi(str)));
-	
-	return (0);
-}*/

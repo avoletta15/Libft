@@ -6,7 +6,7 @@
 /*   By: marioliv <marioliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 12:35:03 by marioliv          #+#    #+#             */
-/*   Updated: 2023/04/15 18:11:56 by marioliv         ###   ########.fr       */
+/*   Updated: 2023/04/17 19:41:25 by marioliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,46 +16,52 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t			h;
 	size_t			n;
-	const char	*hs;
-	const char	*nd;
+	char	*hs;
+	char	*nd;
 
 	h = 0;
 	n = 0;
-	hs = haystack;
-	nd = needle;
+	hs = (char *) haystack;
+	nd = (char *) needle;
 	if (nd[n] == '\0')
-		return ((char *)hs);
-	while (hs && (h + n) < len)
+			return (hs);
+	if (len != 0 && hs)
 	{
-		n = 0;
-		while (hs[h + n] != nd[n] && (h + n) < len)
-		{
+		while (hs[h + n] != nd[n] && (h + n) != len && hs)
 			h++;
-			if (hs[h + n] == nd[n])
-				n++;
-			while (hs[h] == nd[n] && h < len)
+		if (hs[h + n] == nd[n])
+		{
+			while (hs[h] == nd[n] && h != len)
 			{
 				h++;
 				n++;
 				if (nd[n] == '\0')
-				{
-					n--;
-					return ((char *)&hs[h - n]);
-				}
+					return (&hs[h - n]);
 			}
 		}
 	}
-	return (0);
+	return (NULL);
 }
 
-/*#include <stdio.h>
-int	main()
+/*char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char *H;
-	char *N;
-
-	H =  "aaaa bbb cccc";
-	N = "bbb";
-	printf("Teste Result: %s\n",ft_strnstr(H, N, 9));
-	return(0);
+	size_t	i;
+	size_t	j;
+	i = 0;
+	if (len == 0 && !big)
+		return (NULL);
+	if (*little == '\0')
+		return ((char *)big);
+	while (big[i] && len > i)
+	{
+		j = 0;
+		while (big[i + j] == little[j] && i + j < len)
+		{
+			j++;
+			if (little[j] == '\0')
+				return ((char *)&big[i]);
+		}
+		i++;
+	}
+	return (0);
 }*/

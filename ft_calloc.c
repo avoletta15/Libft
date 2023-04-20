@@ -6,7 +6,7 @@
 /*   By: marioliv <marioliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 14:14:15 by marioliv          #+#    #+#             */
-/*   Updated: 2023/04/15 17:45:07 by marioliv         ###   ########.fr       */
+/*   Updated: 2023/04/18 12:39:59 by marioliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,11 @@
 
 void	*ft_calloc(size_t n, size_t size)
 {
-	char	*ptr;
-	
-	if (size == 0)
+	void	*ptr;
+
+	ptr = (void *)malloc(n * size);
+	if (!ptr)
 		return (NULL);
-	else
-		ptr = (char *)malloc(n * size);
-	ft_bzero (ptr, n);
+	ft_bzero(ptr, n * size);
 	return (ptr);
 }
-
-/*#include <stdio.h>
-int	main()
-{
-	printf("RESULT: %p\n", ft_calloc(5, 2));
-	return (0);
-}*/

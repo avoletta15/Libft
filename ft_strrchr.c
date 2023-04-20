@@ -6,7 +6,7 @@
 /*   By: marioliv <marioliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 12:37:55 by marioliv          #+#    #+#             */
-/*   Updated: 2023/04/17 11:32:25 by marioliv         ###   ########.fr       */
+/*   Updated: 2023/04/19 15:20:04 by marioliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	int	len;
-	
+
 	len = ft_strlen(s);
 	if (*s)
 	{
@@ -23,7 +23,7 @@ char	*ft_strrchr(const char *s, int c)
 			len--;
 	}
 	if (s[len] == (char)c)
-			return ((char *)&*s + len);
+		return ((char *)&*s + len);
 	else
 		return (NULL);
 }

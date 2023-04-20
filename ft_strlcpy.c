@@ -6,7 +6,7 @@
 /*   By: marioliv <marioliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 12:27:17 by marioliv          #+#    #+#             */
-/*   Updated: 2023/04/17 09:12:24 by marioliv         ###   ########.fr       */
+/*   Updated: 2023/04/19 15:17:15 by marioliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	return (len);
 }
-
-/*[fail]: your strlcpy copies while destsize is zero, or does not return the size of the string it tried to create
-*/

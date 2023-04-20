@@ -6,7 +6,7 @@
 /*   By: marioliv <marioliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 16:34:56 by marioliv          #+#    #+#             */
-/*   Updated: 2023/04/15 17:50:35 by marioliv         ###   ########.fr       */
+/*   Updated: 2023/04/19 15:14:46 by marioliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-
 	int	i;
 
 	i = 0;
@@ -23,14 +22,5 @@ void	ft_putendl_fd(char *s, int fd)
 		write (fd, &s[i], 1);
 		i++;
 	}
-	write (1, "\n", 1);
+	write (fd, "\n", 1);
 }
-
-/*int	main()
-{
-	char	*c;
-
-	c = "a";
-	ft_putendl_fd(c, 1);
-	return (0);
-}*/

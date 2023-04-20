@@ -6,7 +6,7 @@
 /*   By: marioliv <marioliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 16:02:59 by marioliv          #+#    #+#             */
-/*   Updated: 2023/04/15 17:54:18 by marioliv         ###   ########.fr       */
+/*   Updated: 2023/04/19 15:15:27 by marioliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strdup(const char *s)
 {
 	char	*str;
-	size_t		len;
-	int			i;
+	size_t	len;
+	int		i;
 
 	i = 0;
 	len = ft_strlen(s);

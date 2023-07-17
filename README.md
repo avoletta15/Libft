@@ -8,7 +8,7 @@ Libft - my very first own library! This project's <em>mandatory part</em> was de
 
 External functions used: `write()`, `malloc()` and `free()`.
 
-For more information about Libft's Subject [click here](https://github.com/pedromessetti/libft/blob/master/subject.pdf). The library and functions were written following the rules described in the 42 [Norme](https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf).
+For more information about Libft's Subject [click here](https://cdn.intra.42.fr/pdf/pdf/89655/en.subject.pdf). The library and functions were written following the rules described in the 42 [Norme](https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf).
 </p>
 
 <table style="width:100%">

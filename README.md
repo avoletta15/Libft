@@ -2,7 +2,7 @@
 
 ## Description :clipboard:
 <p>
-Libft - my very first own library! This project's <em>mandatory part</em> was deisgned to recreate - from scratch - some functions used in C, aiming to understand its processes and functionalities, implementing and learning to use them. <em>The bonus part</em> was about <b>linked lists</b> manipulation.
+Libft - my very first own library! This project's <em>mandatory part</em> was deisgned to recreate - from scratch - some functions used in C, aiming to understand its processes and functionalities, implementing and learning to use them. The <em>bonus part</em> was about <b>linked lists</b> manipulation.
 
 <b> *** This library is used in most of my 42 - Lisbon projects *** </b>
 
